@@ -16,6 +16,7 @@ let
       );
     }
     ''
+      echo $files
       cat "$files" > $out
     '';
 in
