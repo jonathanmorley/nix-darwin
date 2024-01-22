@@ -11,10 +11,10 @@ let
 
   caCertificates = pkgs.runCommand "ca-certificates.crt" {}
     ''
-      cat ${escapeShellArgs
+      cat ${escapeShellArgs (
         cfg.certificateFiles ++
         [ (builtins.toFile "extra.crt" (concatStringsSep "\n" cfg.certificates)) ]
-      } > $out
+      )} > $out
     '';
 in
 
