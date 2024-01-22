@@ -17,7 +17,7 @@ let
     }
     ''
       echo $files
-      cat "$files" > $out
+      cat $files > $out
     '';
 in
 
